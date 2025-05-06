@@ -1,0 +1,10 @@
+<header>
+    <div class="nav-container">
+        <!-- 导航菜单 -->
+        <nav>
+            <ul id="navMenu">
+                <li><a href="/" class="active">回到主页</a></li>
+            </ul>
+        </nav>
+    </div>
+</header> 

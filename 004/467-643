@@ -1,0 +1,92 @@
+<div class="ai-design-container">
+    <h2 class="ai-design-title">智能方案设计</h2>
+    
+    <!-- 参数化输入表单 -->
+    <div class="design-container" id="designForm">
+        <div class="input-form">
+            <h2>业主参数化输入</h2>
+            
+            <!-- 基本信息 -->
+            <div class="form-group">
+                <label>建筑物用途</label>
+                <select id="buildingPurpose" required>
+                    <option value="">请选择建筑物用途</option>
+                    <option value="office">办公楼</option>
+                    <option value="commercial">商业建筑</option>
+                    <option value="residential">住宅建筑</option>
+                    <option value="industrial">工业建筑</option>
+                    <option value="public">公共建筑</option>
+                </select>
+            </div>
+            
+            <!-- 尺寸参数 -->
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>建筑长度(m)</label>
+                    <input type="number" id="length" min="1" step="0.1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>建筑宽度(m)</label>
+                    <input type="number" id="width" min="1" step="0.1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>建筑高度(m)</label>
+                    <input type="number" id="height" min="1" step="0.1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>层高(m)</label>
+                    <input type="number" id="floorHeight" min="2.5" step="0.1" required>
+                </div>
+            </div>
+            
+            <!-- 结构参数 -->
+            <div class="form-group">
+                <label>楼面荷载(kN/㎡)</label>
+                <select id="floorLoad" required>
+                    <option value="">请选择楼面荷载</option>
+                    <option value="2.0">2.0 - 轻型办公</option>
+                    <option value="3.0">3.0 - 普通住宅</option>
+                    <option value="4.0">4.0 - 高密度办公</option>
+                    <option value="5.0">5.0 - 商业空间</option>
+                    <option value="6.0">6.0 - 公共区域</option>
+                    <option value="8.0">8.0 - 轻工业</option>
+                    <option value="10.0">10.0 - 重型工业</option>
+                </select>
+            </div>
+            
+            <!-- 结构体系选择 -->
+            <div class="form-group">
+                <label>结构体系</label>
+                <select id="structureSystem" required>
+                    <option value="">请选择结构体系</option>
+                    <option value="frame">框架结构</option>
+                    <option value="shearWall">剪力墙结构</option>
+                    <option value="frameBrace">框架支撑结构</option>
+                    <option value="frameShear">框架-剪力墙结构</option>
+                    <option value="loadBearingSeparation">承重抗侧分离组合结构体系</option>
+                    <option value="steel">钢结构体系</option>
+                    <option value="composite">钢-混凝土组合结构</option>
+                </select>
+            </div>
+            
+            <!-- 提交按钮 -->
+            <button type="submit" class="submit-btn">生成方案设计</button>
+        </div>
+        
+        <!-- 预览区域 -->
+        <div class="preview-container">
+            <div class="preview-tabs">
+                <div class="preview-tab active" data-target="modelViewer">3D模型预览</div>
+                <div class="preview-tab" data-target="reportViewer">设计报告</div>
+            </div>
+            
+            <div class="preview-content">
+                <div id="modelViewer"></div>
+                <div id="reportViewer"></div>
+            </div>
+        </div>
+    </div>
+</div> 
